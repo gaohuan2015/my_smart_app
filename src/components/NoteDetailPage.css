@@ -1,0 +1,509 @@
+.note-detail-container {
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.note-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #2188ff;
+}
+
+.note-title-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 32px;
+}
+
+.note-icon {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    height: 24px;
+}
+
+.note-title-section h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.4;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.note-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.meta-icon {
+    font-size: 16px;
+}
+
+.note-content {
+    margin-bottom: 32px;
+}
+
+.content-section {
+    margin-bottom: 24px;
+}
+
+.content-section h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.text-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.attachments {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.file-icon {
+    font-size: 16px;
+}
+
+.note-actions {
+    display: flex;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 24px;
+    min-width: 120px;
+    border: none;
+    border-radius: 6px;
+    background: #f0f2f5;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05),
+                0 1px 2px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.action-btn:hover {
+    background: #e4e6e9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn.share {
+    background: #4CAF50;
+    color: white;
+}
+
+.action-btn.share:hover {
+    background: #43a047;
+}
+
+.action-btn.podcast {
+    background: #2196F3;
+    color: white;
+    min-width: 140px;
+}
+
+.action-btn.podcast:hover {
+    background: #1e88e5;
+}
+
+.action-btn.delete {
+    background: #ff4444;
+    color: white;
+    border: none;
+}
+
+.action-btn.delete:hover {
+    background: #ff3333;
+}
+
+.wechat-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    fill: currentColor;
+}
+
+/* 添加编辑相关的样式 */
+.edit-content {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.content-editor {
+    width: 100%;
+    min-height: 200px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.content-editor:focus {
+    outline: none;
+    border-color: #2188ff;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.action-btn.save {
+    background-color: #2188ff;
+    color: white;
+    border-color: #2188ff;
+}
+
+.action-btn.save:hover {
+    background-color: #1a76e8;
+}
+
+.text-content {
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    min-height: 100px;
+    white-space: pre-wrap;
+}
+
+.blocks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.block-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 0;
+}
+
+.block-content {
+    flex: 1;
+    position: relative;
+}
+
+.block-editor {
+    width: 100%;
+    min-height: 28px;
+    padding: 4px 8px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.block-editor:focus {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.block-editor:empty:before {
+    content: attr(placeholder);
+    color: #999;
+}
+
+.add-block-button {
+    opacity: 0;
+    position: absolute;
+    left: -24px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    color: #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.block-container:hover .add-block-button {
+    opacity: 1;
+}
+
+.add-block-button:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.block-menu {
+    position: absolute;
+    left: -120px;
+    top: 24px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 4px;
+    z-index: 1000;
+    width: 180px;
+}
+
+.block-menu button {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 4px;
+}
+
+.block-menu button:hover {
+    background-color: #f5f5f5;
+}
+
+.block-menu span {
+    font-size: 16px;
+}
+
+.command-menu {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    z-index: 1000;
+}
+
+.menu-header {
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #999;
+    border-bottom: 1px solid #eee;
+}
+
+.command-menu button {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.command-menu button:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.menu-item-content {
+    text-align: left;
+    flex: 1;
+}
+
+.menu-item-title {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.menu-item-desc {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 式化菜单样式 */
+.format-menu {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    z-index: 1000;
+    height: 32px;  /* 固定高度 */
+}
+
+.format-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    color: #4d4d4d;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 0 2px;
+    padding: 0;
+}
+
+.format-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.format-btn span {
+    font-weight: 500;
+    line-height: 1;
+}
+
+.format-divider {
+    width: 1px;
+    height: 16px;
+    background-color: #e0e0e0;
+    margin: 0 4px;
+}
+
+/* 修改文本选择的样式 */
+.block-editor::selection {
+    background-color: rgba(35, 131, 226, 0.28);
+}
+
+.block-display {
+    padding: 4px 8px;
+    min-height: 28px;
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: text;
+}
+
+.block-display:hover {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.block-display strong {
+    font-weight: 600;
+}
+
+/* 修改加粗文本的样式 */
+.text-bold {
+    font-weight: 600;
+    color: #000;  /* 可选：让加粗文颜色更深 */
+}
+
+/* 确保编辑器中的文本正常显示 */
+.block-editor {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 添加斜体样式 */
+.text-italic {
+    font-style: italic;
+    color: #000;
+}
+
+/* 支持样式混合 */
+.text-bold.text-italic {
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* 微信图标样式 */
+.wechat-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* 添加标题输入框样式 */
+.title-input {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    line-height: 28px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-family: inherit;
+    font-weight: bold;
+    width: 100%;
+}
+
+.title-input:focus {
+    outline: none;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+  

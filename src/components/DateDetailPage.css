@@ -1,0 +1,325 @@
+.date-detail-container {
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.date-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    gap: 16px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #2188ff;
+}
+
+.date-detail-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.recordings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.recording-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.recording-item:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.recording-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.recording-time {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.recording-time::before {
+    content: '🕒';
+    margin-right: 6px;
+}
+
+.recording-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.action-btn.playing {
+    background-color: #e8f0fe;
+    color: #2188ff;
+}
+
+.action-btn.playing:hover {
+    background-color: #d8e8fd;
+}
+
+.recording-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
+    padding: 32px;
+}
+
+.no-recordings {
+    text-align: center;
+    color: #666;
+    padding: 32px;
+    font-style: italic;
+}
+
+.error-message {
+    color: #ff4444;
+    text-align: center;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #fff0f0;
+    border-radius: 4px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #2188ff;
+    transition: width 0.1s linear;
+}
+
+/* 音频播放器样式 */
+.audio-player {
+    margin: 12px 0;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.audio-controls-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.audio-progress {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.audio-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #2188ff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+.volume-control {
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.volume-slider {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #2188ff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+/* 添加 Firefox 支持 */
+.audio-progress::-moz-range-thumb,
+.volume-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #2188ff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.audio-progress::-moz-range-track,
+.volume-slider::-moz-range-track {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+/* 过滤按钮样式 */
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 0 4px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background: white;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-btn:hover {
+    background: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
+.filter-btn.active {
+    background: #2188ff;
+    color: white;
+    border-color: #2188ff;
+}
+
+.filter-btn.active:hover {
+    background: #1a76e8;
+}
+
+/* 添加图片和网页内容的样式 */
+.image-content {
+    margin-top: 12px;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.webpage-content {
+    margin-top: 12px;
+}
+
+.webpage-content a {
+    color: #2188ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.webpage-content a:hover {
+    text-decoration: underline;
+}
+
+/* 分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 16px 0;
+}
+
+.page-btn {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: white;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 14px;
+    color: #666;
+    min-width: 60px;
+    text-align: center;
+}
+ 
